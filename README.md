@@ -14,11 +14,13 @@ class Medicine
     {
         this.price=pprice;
     }
-    total_with_discount=()=>
+ total_with_discount=(discount)=>
     {
-     let discount=0;
+
      let total=0;
-     discount=this.price*.35;
+     let calcdiscount=0;
+     calcdiscount=discount/100;
+     discount=this.price*calcdiscount;
      total=this.price-discount;  
      return {total,discount}
     }
@@ -33,7 +35,7 @@ class Medicine
  let Medicine=require("./Medicine").Medicine;
 
 let medicine=new Medicine(10.06);
-let calc=medicine.total_with_discount();
+let calc=medicine.total_with_discount(35);
 console.log("The medicine discount is: "+calc.discount);
 console.log("                                              ");
 console.log("The total to pay is: "+calc.total);
