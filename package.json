@@ -1,0 +1,16 @@
+{
+  "name": "discount-medicine",
+  "version": "1.0.0",
+  "description": "Calculate the discount and the amount to pay for a medicine",
+  "scripts": {
+    "start": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rwkama1/Discount-medicine"
+  },
+ 
+  "keywords": ["js","javascript","calculation","medicine","discount","total"],
+  "author": "Carlos Rodriguez <rwkamandriw@gmail.com>",
+  "license": "MIT"
+}
