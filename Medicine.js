@@ -4,11 +4,13 @@ class Medicine
     {
         this.price=pprice;
     }
-    total_with_discount=()=>
+    total_with_discount=(discount)=>
     {
-     let discount=0;
+
      let total=0;
-     discount=this.price*.35;
+     let calcdiscount=0;
+     calcdiscount=discount/100;
+     discount=this.price*calcdiscount;
      total=this.price-discount;  
      return {total,discount}
     }
